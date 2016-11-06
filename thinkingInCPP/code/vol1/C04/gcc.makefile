@@ -11,6 +11,12 @@
 
 CPP = g++
 OFLAG = -o
+BINS = CLibTest \
+	CppLibTest \
+	Sizeof \
+	StackTest \
+	Scoperes 
+
 .SUFFIXES : .o .cpp .c
 .cpp.o :
 	$(CPP) $(CPPFLAGS) -c $<
@@ -30,6 +36,10 @@ test: all
 	Sizeof  
 	StackTest StackTest.cpp 
 	Scoperes  
+
+clean:
+	rm -rf *.o
+	rm -rf $(BINS)
 
 bugs: 
 	@echo No compiler bugs in this directory!

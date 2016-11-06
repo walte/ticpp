@@ -11,6 +11,13 @@
 
 CPP = g++
 OFLAG = -o
+BINS = Public \
+	Private \
+	Friend \
+	NestFriend \
+	Class \
+	UseHandle 
+
 .SUFFIXES : .o .cpp .c
 .cpp.o :
 	$(CPP) $(CPPFLAGS) -c $<
@@ -32,6 +39,10 @@ test: all
 	NestFriend  
 	Class  
 	UseHandle  
+
+clean:
+	rm -rf *.o
+	rm -rf $(BINS)
 
 bugs: 
 	@echo No compiler bugs in this directory!

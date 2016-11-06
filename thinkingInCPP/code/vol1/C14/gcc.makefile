@@ -11,6 +11,25 @@
 
 CPP = g++
 OFLAG = -o
+BINS = Composition \
+	Composition2 \
+	Inheritance \
+	PseudoConstructor \
+	Combined \
+	Order \
+	NameHiding \
+	InheritStack \
+	SynthesizedFunctions \
+	Car \
+	FName1 \
+	FName2 \
+	PrivateInheritance \
+	Protected \
+	OperatorInheritance \
+	Instrument \
+	CopyConstructor \
+	InheritStack2 
+
 .SUFFIXES : .o .cpp .c
 .cpp.o :
 	$(CPP) $(CPPFLAGS) -c $<
@@ -56,6 +75,10 @@ test: all
 	Instrument  
 	CopyConstructor  
 	InheritStack2  
+
+clean:
+	rm -rf *.o
+	rm -rf $(BINS)
 
 bugs: 
 	@echo No compiler bugs in this directory!

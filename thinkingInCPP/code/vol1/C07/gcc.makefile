@@ -11,6 +11,13 @@
 
 CPP = g++
 OFLAG = -o
+BINS = Use \
+	Stash3Test \
+	UnionClass \
+	SuperVar \
+	AnonymousUnion \
+	MemTest 
+
 .SUFFIXES : .o .cpp .c
 .cpp.o :
 	$(CPP) $(CPPFLAGS) -c $<
@@ -32,6 +39,10 @@ test: all
 	SuperVar  
 	AnonymousUnion  
 	MemTest  
+
+clean:
+	rm -rf *.o
+	rm -rf $(BINS)
 
 bugs: 
 	@echo No compiler bugs in this directory!

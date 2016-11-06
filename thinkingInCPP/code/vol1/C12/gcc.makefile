@@ -11,6 +11,29 @@
 
 CPP = g++
 OFLAG = -o
+BINS = OperatorOverloadingSyntax \
+	OverloadingUnaryOperators \
+	IntegerTest \
+	ByteTest \
+	OverloadingOperatorComma \
+	SmartPointer \
+	NestedSmartPointer \
+	PointerToMemberOperator \
+	CopyingVsInitialization \
+	SimpleAssignment \
+	CopyingWithPointers \
+	ReferenceCounting \
+	AutomaticOperatorEquals \
+	AutomaticTypeConversion \
+	ExplicitKeyword \
+	OperatorOverloadingConversion \
+	ReflexivityInOverloading \
+	Strings1 \
+	Strings2 \
+	TypeConversionAmbiguity \
+	TypeConversionFanout \
+	CopyingVsInitialization2
+
 .SUFFIXES : .o .cpp .c
 .cpp.o :
 	$(CPP) $(CPPFLAGS) -c $<
@@ -64,6 +87,10 @@ test: all
 	TypeConversionAmbiguity  
 	TypeConversionFanout  
 	CopyingVsInitialization2  
+
+clean:
+	rm -rf *.o
+	rm -rf $(BINS)
 
 bugs: \
 	IostreamOperatorOverloading 

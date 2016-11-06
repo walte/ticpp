@@ -171,3 +171,19 @@ gcc:
 	cd C15; make -f gcc.makefile
 	cd C16; make -f gcc.makefile
 
+clean:
+	cd C02; make -f gcc.makefile clean
+	cd C03; make -f gcc.makefile clean
+	cd C04; make -f gcc.makefile clean
+	cd C05; make -f gcc.makefile clean
+	cd C06; make -f gcc.makefile clean
+	cd C07; make -f gcc.makefile clean
+	cd C08; make -f gcc.makefile clean
+	cd C09; make -f gcc.makefile clean
+	cd C10; make -f gcc.makefile clean
+	cd C11; make -f gcc.makefile clean
+	cd C12; make -f gcc.makefile clean
+	cd C13; make -f gcc.makefile clean
+	cd C14; make -f gcc.makefile clean
+	cd C15; make -f gcc.makefile clean
+	cd C16; make -f gcc.makefile clean

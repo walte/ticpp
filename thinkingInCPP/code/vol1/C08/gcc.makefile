@@ -11,6 +11,25 @@
 
 CPP = g++
 OFLAG = -o
+BINS = Safecons \
+	Constag \
+	ConstPointers \
+	PointerAssignment \
+	Constval \
+	ConstReturnValues \
+	ConstPointer \
+	ConstTemporary \
+	ConstInitialization \
+	BuiltInTypeConstructors \
+	EncapsulatingTypes \
+	StringStack \
+	EnumHack \
+	ConstMember \
+	Quoter \
+	Castaway \
+	Mutable \
+	Volatile
+
 .SUFFIXES : .o .cpp .c
 .cpp.o :
 	$(CPP) $(CPPFLAGS) -c $<
@@ -56,6 +75,10 @@ test: all
 	Castaway  
 	Mutable  
 	Volatile  
+
+clean:
+	rm -rf *.o
+	rm -rf $(BINS)
 
 bugs: 
 	@echo No compiler bugs in this directory!

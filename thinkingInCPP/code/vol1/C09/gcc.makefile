@@ -11,6 +11,19 @@
 
 CPP = g++
 OFLAG = -o
+BINS = MacroSideEffects \
+	Inline \
+	Access \
+	Rectangle \
+	Rectangle2 \
+	Cpptime \
+	Stash4Test \
+	Stack4Test \
+	EvaluationOrder \
+	Hidden \
+	Noinsitu \
+	ErrTest
+
 .SUFFIXES : .o .cpp .c
 .cpp.o :
 	$(CPP) $(CPPFLAGS) -c $<
@@ -44,6 +57,10 @@ test: all
 	Hidden  
 	Noinsitu  
 	ErrTest ErrTest.cpp 
+
+clean:
+	rm -rf *.o
+	rm -rf $(BINS)
 
 bugs: 
 	@echo No compiler bugs in this directory!

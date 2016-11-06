@@ -11,6 +11,69 @@
 
 CPP = g++
 OFLAG = -o
+BINS = Return \
+	Ifthen \
+	Guess \
+	Guess2 \
+	Charlist \
+	Menu \
+	Menu2 \
+	gotoKeyword \
+	CatsInHats \
+	AutoIncrement \
+	Basic \
+	Specify \
+	YourPets1 \
+	YourPets2 \
+	PassByValue \
+	PassAddress \
+	PassReference \
+	AllDefinitions \
+	VoidPointer \
+	CastFromVoidPointer \
+	Scope \
+	OnTheFly \
+	Global \
+	Static \
+	FileStatic \
+	Forward \
+	Mathops \
+	Boolean \
+	Bitwise \
+	CommaOperator \
+	Pitfall \
+	SimpleCast \
+	FunctionCallCast \
+	static_cast \
+	const_cast \
+	reinterpret_cast \
+	sizeof \
+	sizeofOperator \
+	SimpleStruct \
+	SimpleStruct2 \
+	SelfReferential \
+	SimpleStruct3 \
+	Enum \
+	Union \
+	Arrays \
+	StructArray \
+	ArrayAddresses \
+	ArrayIdentifier \
+	PointersAndBrackets \
+	ArrayArguments \
+	CommandLineArgs \
+	ArgsToInts \
+	FloatingAsBinary \
+	PointerIncrement \
+	PointerIncrement2 \
+	PointerArithmetic \
+	DynamicDebugFlags \
+	StringizingExpressions \
+	Assert \
+	ComplicatedDefinitions \
+	PointerToFunction \
+	FunctionTable
+
 .SUFFIXES : .o .cpp .c
 .cpp.o :
 	$(CPP) $(CPPFLAGS) -c $<
@@ -144,6 +207,10 @@ test: all
 	ComplicatedDefinitions  
 	PointerToFunction  
 	FunctionTable  
+
+clean:
+	rm -rf *.o
+	rm -rf $(BINS)
 
 bugs: 
 	@echo No compiler bugs in this directory!

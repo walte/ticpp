@@ -11,6 +11,22 @@
 
 CPP = g++
 OFLAG = -o
+BINS = IntStack \
+	Array \
+	Array2 \
+	StackTemplateTest \
+	Array3 \
+	TStackTest \
+	TPStashTest \
+	OwnerStackTest \
+	ValueStackTest \
+	IterIntStack \
+	NestedIterator \
+	IterStackTemplateTest \
+	TStack2Test \
+	TPStash2Test \
+	Drawing 
+
 .SUFFIXES : .o .cpp .c
 .cpp.o :
 	$(CPP) $(CPPFLAGS) -c $<
@@ -50,6 +66,10 @@ test: all
 	TStack2Test  
 	TPStash2Test  
 	Drawing  
+
+clean:
+	rm -rf *.o
+	rm -rf $(BINS)
 
 bugs: 
 	@echo No compiler bugs in this directory!

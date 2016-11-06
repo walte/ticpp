@@ -11,6 +11,33 @@
 
 CPP = g++
 OFLAG = -o
+BINS = StaticVariablesInfunctions \
+	StaticObjectsInFunctions \
+	StaticDestructors \
+	LocalExtern \
+	MyLib \
+	Continuation \
+	BobsSuperDuperLibrary \
+	UnnamedNamespaces \
+	FriendInjection \
+	ScopeResolution \
+	Arithmetic \
+	NamespaceOverriding1 \
+	OverridingAmbiguity \
+	UsingDeclaration1 \
+	UsingDeclaration2 \
+	Statinit \
+	StaticArray \
+	StaticObjectArrays \
+	Local \
+	SimpleStaticMemberFunction \
+	StaticMemberFunctions \
+	Singleton \
+	Oof \
+	Initializer2 \
+	Technique2 \
+	Technique2b 
+
 .SUFFIXES : .o .cpp .c
 .cpp.o :
 	$(CPP) $(CPPFLAGS) -c $<
@@ -72,6 +99,10 @@ test: all
 	Initializer2  
 	Technique2  
 	Technique2b  
+
+clean:
+	rm -rf *.o
+	rm -rf $(BINS)
 
 bugs: 
 	@echo No compiler bugs in this directory!

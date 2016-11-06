@@ -11,6 +11,22 @@
 
 CPP = g++
 OFLAG = -o
+BINS = FreeStandingReferences \
+	Reference \
+	ConstReferenceArguments \
+	ReferenceToPointer \
+	PassingBigStructures \
+	HowMany \
+	HowMany2 \
+	Linenum \
+	DefaultCopyConstructor \
+	NoCopyConstruction \
+	SimpleStructure \
+	PointerToMemberData \
+	PmemFunDefinition \
+	PointerToMemberFunction \
+	PointerToMemberFunction2 
+
 .SUFFIXES : .o .cpp .c
 .cpp.o :
 	$(CPP) $(CPPFLAGS) -c $<
@@ -50,6 +66,10 @@ test: all
 	PmemFunDefinition  
 	PointerToMemberFunction  
 	PointerToMemberFunction2  
+
+clean:
+	rm -rf *.o
+	rm -rf $(BINS)
 
 bugs: 
 	@echo No compiler bugs in this directory!

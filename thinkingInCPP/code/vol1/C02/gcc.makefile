@@ -11,6 +11,19 @@
 
 CPP = g++
 OFLAG = -o
+BINS = Declare \
+	Hello \
+	Stream2 \
+	Concat \
+	Numconv \
+	CallHello \
+	HelloStrings \
+	Scopy \
+	FillString \
+	Fillvector \
+	GetWords \
+	Intvector 
+
 .SUFFIXES : .o .cpp .c
 .cpp.o :
 	$(CPP) $(CPPFLAGS) -c $<
@@ -44,6 +57,10 @@ test: all
 	Fillvector  
 	GetWords  
 	Intvector  
+
+clean:
+	rm -rf *.o
+	rm -rf $(BINS) 
 
 bugs: 
 	@echo No compiler bugs in this directory!

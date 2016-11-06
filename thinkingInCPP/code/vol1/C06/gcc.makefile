@@ -11,6 +11,14 @@
 
 CPP = g++
 OFLAG = -o
+BINS = Constructor1 \
+	DefineInitialize \
+	Nojump \
+	Stash2Test \
+	Stack3Test \
+	Multiarg \
+	AutoDefaultConstructor 
+
 .SUFFIXES : .o .cpp .c
 .cpp.o :
 	$(CPP) $(CPPFLAGS) -c $<
@@ -34,6 +42,10 @@ test: all
 	Stack3Test Stack3Test.cpp 
 	Multiarg  
 	AutoDefaultConstructor  
+
+clean:
+	rm -rf *.o
+	rm -rf $(BINS)
 
 bugs: 
 	@echo No compiler bugs in this directory!

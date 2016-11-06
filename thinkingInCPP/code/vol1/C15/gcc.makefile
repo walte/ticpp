@@ -11,6 +11,26 @@
 
 CPP = g++
 OFLAG = -o
+BINS = Instrument2 \
+	Instrument3 \
+	Instrument4 \
+	Sizes \
+	Early \
+	Instrument5 \
+	PureVirtualDefinitions \
+	AddingVirtuals \
+	ObjectSlicing \
+	NameHiding2 \
+	VariantReturn \
+	VirtualDestructors \
+	UnAbstract \
+	PureVirtualDestructors \
+	VirtualsInDestructors \
+	OStackTest \
+	OperatorPolymorphism \
+	DynamicCast \
+	StaticHierarchyNavigation 
+
 .SUFFIXES : .o .cpp .c
 .cpp.o :
 	$(CPP) $(CPPFLAGS) -c $<
@@ -58,6 +78,10 @@ test: all
 	OperatorPolymorphism  
 	DynamicCast  
 	StaticHierarchyNavigation  
+
+clean:
+	rm -rf *.o
+	rm -rf $(BINS)
 
 bugs: 
 	@echo No compiler bugs in this directory!

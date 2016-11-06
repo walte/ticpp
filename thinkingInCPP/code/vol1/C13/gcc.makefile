@@ -11,6 +11,16 @@
 
 CPP = g++
 OFLAG = -o
+BINS = MallocClass \
+	NewAndDelete \
+	BadVoidPointerDeletion \
+	PStashTest \
+	GlobalOperatorNew \
+	Framis \
+	ArrayOperatorNew \
+	NoMemory \
+	PlacementOperatorNew 
+
 .SUFFIXES : .o .cpp .c
 .cpp.o :
 	$(CPP) $(CPPFLAGS) -c $<
@@ -38,6 +48,10 @@ test: all
 	ArrayOperatorNew  
 	NoMemory  
 	PlacementOperatorNew  
+
+clean:
+	rm -rf *.o
+	rm -rf $(BINS)
 
 bugs: \
 	NewHandler 
