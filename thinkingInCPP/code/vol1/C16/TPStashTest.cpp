@@ -5,9 +5,10 @@
 // Copyright notice in Copyright.txt
 //{L} AutoCounter
 #include "AutoCounter.h"
-#include "TPStash.h"
 #include <iostream>
 #include <fstream>
+#include <cstring>
+#include "TPStash.h"
 using namespace std;
 
 int main() {

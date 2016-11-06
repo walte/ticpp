@@ -7,6 +7,7 @@
 // compile-time constant inside a class
 #include <string>
 #include <iostream>
+#include <cstring>
 using namespace std;
 
 class StringStack {

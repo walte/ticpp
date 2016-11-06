@@ -3,6 +3,7 @@
 // Available at http://www.BruceEckel.com
 // (c) Bruce Eckel 2000
 // Copyright notice in Copyright.txt
+#include <cstring>
 #include "TPStash2.h"
 #include "../require.h"
 #include <iostream>

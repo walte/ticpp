@@ -4,6 +4,7 @@
 // (c) Bruce Eckel 2000
 // Copyright notice in Copyright.txt
 #include <vector> // Uses Standard vector too!
+#include <cstring>
 #include "TPStash2.h"
 #include "TStack2.h"
 #include "Shape.h"
